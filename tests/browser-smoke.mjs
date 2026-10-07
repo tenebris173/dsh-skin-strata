@@ -1,4 +1,4 @@
-/**
+﻿/**
  * STRATA 皮肤集成冒烟测试 —— 真实浏览器引擎里跑真实 bundle。
  *
  * 覆盖：登记载荷 → activate 副作用（主题/覆盖层/样式表/装饰层/席位）→
@@ -118,6 +118,12 @@ const HARNESS2 = String.raw`
     cssLen: (document.querySelector('style[data-skn-strata-style]') || {}).textContent ? document.querySelector('style[data-skn-strata-style]').textContent.length : 0,
     chrome: !!document.querySelector('[data-skn-strata-chrome]'),
     chromeParts: document.querySelectorAll('[data-skn-strata-chrome] > *').length,
+
+    chromeHasContour: !!document.querySelector('[data-skn-strata-chrome] .skn-strata-contour'),
+
+    chromeHasMarks: !!document.querySelector('[data-skn-strata-chrome] .skn-strata-mark'),
+
+    hasContourCss: /skn-strata-contour\{position:absolute/.test((document.querySelector('style[data-skn-strata-style]') || {}).textContent || ''),
     themeRegisters: c.themeRegisters.slice(),
     overrides: c.overrides, tokens: c.lastTokens, source: c.lastSource,
     section: c.section, locale: c.locale, effects: c.effects.length,
@@ -180,7 +186,9 @@ check('带内联 SVG 预览', r.registered.preview === 'string')
 console.log('激活副作用')
 check('body 打上皮肤标记', r.afterActivate.bodyAttr === '')
 check('注入自有 style 节点', r.afterActivate.styleNode && r.afterActivate.cssLen > 5000, 'len=' + r.afterActivate.cssLen)
-check('注入装饰层（网格/扫描线/边缘/四角 = 7 个节点）', r.afterActivate.chrome && r.afterActivate.chromeParts === 7, 'parts=' + r.afterActivate.chromeParts)
+  check('注入装饰层（等高线/网格/扫描线/边缘 = 4 个节点）', r.afterActivate.chrome && r.afterActivate.chromeParts === 4, 'parts=' + r.afterActivate.chromeParts)
+  check('等高线图层已注入且带 CSS', r.afterActivate.chromeHasContour && r.afterActivate.hasContourCss, 'node=' + r.afterActivate.chromeHasContour + ' css=' + r.afterActivate.hasContourCss)
+  check('四角常驻角标已移除（P0：标记只给活跃/需注意）', r.afterActivate.chromeHasMarks === false, 'marks=' + r.afterActivate.chromeHasMarks)
 check('token 覆盖 100+ 项', r.afterActivate.overrides === 1 && r.afterActivate.tokens > 100, 'tokens=' + r.afterActivate.tokens)
 check('覆盖层 source = 皮肤 id', r.afterActivate.source === 'skins.strata')
 check('注册 settings.section 席位', r.afterActivate.section?.id === 'skn-strata-settings')
