@@ -122,6 +122,7 @@ const HARNESS2 = String.raw`
     chromeHasContour: !!document.querySelector('[data-skn-strata-chrome] .skn-strata-contour'),
 
     chromeHasMarks: !!document.querySelector('[data-skn-strata-chrome] .skn-strata-mark'),
+    chromeHasEdge: !!document.querySelector('[data-skn-strata-chrome] .skn-strata-edge'),
 
     hasContourCss: /skn-strata-contour\{position:absolute/.test((document.querySelector('style[data-skn-strata-style]') || {}).textContent || ''),
     themeRegisters: c.themeRegisters.slice(),
@@ -186,7 +187,7 @@ check('带内联 SVG 预览', r.registered.preview === 'string')
 console.log('激活副作用')
 check('body 打上皮肤标记', r.afterActivate.bodyAttr === '')
 check('注入自有 style 节点', r.afterActivate.styleNode && r.afterActivate.cssLen > 5000, 'len=' + r.afterActivate.cssLen)
-  check('注入装饰层（等高线/网格/扫描线/边缘 = 4 个节点）', r.afterActivate.chrome && r.afterActivate.chromeParts === 4, 'parts=' + r.afterActivate.chromeParts)
+  check('注入装饰层（等高线/网格/扫描线/边缘 = 4 个节点）', r.afterActivate.chrome && r.afterActivate.chromeParts === 3, 'parts=' + r.afterActivate.chromeParts)
   check('等高线图层已注入且带 CSS', r.afterActivate.chromeHasContour && r.afterActivate.hasContourCss, 'node=' + r.afterActivate.chromeHasContour + ' css=' + r.afterActivate.hasContourCss)
   check('四角常驻角标已移除（P0：标记只给活跃/需注意）', r.afterActivate.chromeHasMarks === false, 'marks=' + r.afterActivate.chromeHasMarks)
 check('token 覆盖 100+ 项', r.afterActivate.overrides === 1 && r.afterActivate.tokens > 100, 'tokens=' + r.afterActivate.tokens)
@@ -216,7 +217,7 @@ check('圆角切到工作台（6/8px）', r.terminalCyan.radiusMd === '6px' && r
 
 console.log('纹路与投影开关')
 check('关纹理后不再输出网格/扫描线', r.textureOff.hasGrid === false && r.textureOff.hasScan === false, JSON.stringify(r.textureOff))
-check('装饰层仍在（四角/边缘保留）', r.textureOff.chrome === true && r.textureOff.hasEdge === true)
+check('左侧警示条已移除（edge 层已删）', r.afterActivate.chromeHasEdge === false, 'edge=' + r.afterActivate.chromeHasEdge)
 check('硬投影仍开启', r.textureOff.hasLift === true)
 
 console.log('teardown 净场')
