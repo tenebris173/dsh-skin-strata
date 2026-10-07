@@ -24,9 +24,9 @@
       "apiVersion": "dsh.ecosystem.ui-skin-loader/v1",
       "id": "strata",
       "name": "STRATA",
-      "version": "1.0.9",
+      "version": "1.0.0",
       "author": "tenebris173",
-      "description": "罗德岛终端风格：浅色纸面 / 作战终端两套底，直角切角、黑色发丝线、警示黄、四角登记标记与全屏细网格。",
+      "description": "STRATA 地层：工业网格与等高线气质。浅色纸面 / 深色终端两套底，发丝线直角框、警示黄主强调 + 弱强调蓝、聚焦态双环，纹理中心自动让位于阅读区。",
       "tags": [
         "light",
         "dark",
@@ -36,7 +36,7 @@
         "switchable",
         "dsh-plugin"
       ],
-      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\" role=\"img\" aria-label=\"STRATA\"><rect width=\"320\" height=\"180\" fill=\"#f4f5f7\"/><rect x=\"0\" y=\"0\" width=\"320\" height=\"18\" fill=\"#111417\"/><rect x=\"0\" y=\"0\" width=\"42\" height=\"18\" fill=\"#ffd100\"/><text x=\"21\" y=\"13\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"9\" font-weight=\"700\" letter-spacing=\".18em\" fill=\"#111417\">STRATA</text><rect x=\"8\" y=\"26\" width=\"92\" height=\"128\" fill=\"#ffffff\" stroke=\"#111417\" stroke-width=\"1.2\"/><rect x=\"8\" y=\"26\" width=\"92\" height=\"14\" fill=\"#111417\"/><rect x=\"16\" y=\"50\" width=\"60\" height=\"3\" fill=\"#8b939d\"/><rect x=\"16\" y=\"60\" width=\"72\" height=\"3\" fill=\"#8b939d\"/><rect x=\"16\" y=\"94\" width=\"76\" height=\"12\" fill=\"#111417\"/><rect x=\"16\" y=\"112\" width=\"76\" height=\"12\" fill=\"#ffffff\" stroke=\"#111417\"/><rect x=\"16\" y=\"112\" width=\"3\" height=\"12\" fill=\"#ffd100\"/><rect x=\"110\" y=\"26\" width=\"202\" height=\"70\" fill=\"#ffffff\" stroke=\"#111417\" stroke-width=\"1.2\"/><rect x=\"110\" y=\"26\" width=\"202\" height=\"14\" fill=\"#111417\"/><rect x=\"120\" y=\"50\" width=\"180\" height=\"3\" fill=\"#525a64\"/><rect x=\"120\" y=\"58\" width=\"150\" height=\"3\" fill=\"#525a64\"/><rect x=\"196\" y=\"84\" width=\"108\" height=\"12\" fill=\"#ffd100\" stroke=\"#111417\"/><rect x=\"110\" y=\"104\" width=\"202\" height=\"50\" fill=\"#ffffff\" stroke=\"#111417\" stroke-width=\"1.2\"/><rect x=\"110\" y=\"104\" width=\"3\" height=\"50\" fill=\"#111417\"/><text x=\"160\" y=\"174\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"9\" letter-spacing=\".26em\" fill=\"#8b939d\">RHODES ISLAND TERMINAL</text></svg>",
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\" role=\"img\" aria-label=\"STRATA\"><rect width=\"320\" height=\"180\" fill=\"#f4f5f7\"/><rect x=\"0\" y=\"0\" width=\"320\" height=\"18\" fill=\"#111417\"/><rect x=\"0\" y=\"0\" width=\"42\" height=\"18\" fill=\"#ffd100\"/><text x=\"21\" y=\"13\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"9\" font-weight=\"700\" letter-spacing=\".18em\" fill=\"#111417\">STRATA</text><rect x=\"8\" y=\"26\" width=\"92\" height=\"128\" fill=\"#ffffff\" stroke=\"#111417\" stroke-width=\"1.2\"/><rect x=\"8\" y=\"26\" width=\"92\" height=\"14\" fill=\"#111417\"/><rect x=\"16\" y=\"50\" width=\"60\" height=\"3\" fill=\"#8b939d\"/><rect x=\"16\" y=\"60\" width=\"72\" height=\"3\" fill=\"#8b939d\"/><rect x=\"16\" y=\"94\" width=\"76\" height=\"12\" fill=\"#111417\"/><rect x=\"16\" y=\"112\" width=\"76\" height=\"12\" fill=\"#ffffff\" stroke=\"#111417\"/><rect x=\"16\" y=\"112\" width=\"3\" height=\"12\" fill=\"#ffd100\"/><rect x=\"110\" y=\"26\" width=\"202\" height=\"70\" fill=\"#ffffff\" stroke=\"#111417\" stroke-width=\"1.2\"/><rect x=\"110\" y=\"26\" width=\"202\" height=\"14\" fill=\"#111417\"/><rect x=\"120\" y=\"50\" width=\"180\" height=\"3\" fill=\"#525a64\"/><rect x=\"120\" y=\"58\" width=\"150\" height=\"3\" fill=\"#525a64\"/><rect x=\"196\" y=\"84\" width=\"108\" height=\"12\" fill=\"#ffd100\" stroke=\"#111417\"/><rect x=\"110\" y=\"104\" width=\"202\" height=\"50\" fill=\"#ffffff\" stroke=\"#111417\" stroke-width=\"1.2\"/><rect x=\"110\" y=\"104\" width=\"3\" height=\"50\" fill=\"#111417\"/><text x=\"160\" y=\"174\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"9\" letter-spacing=\".26em\" fill=\"#8b939d\">STRATA · CONTOUR GRID</text></svg>",
       "requires": {
         "service": "uiSkinLoader",
         "reference": "@dsh-eac/ui-skin-loader >= 1.2.0",
