@@ -11,18 +11,18 @@
   },
   "description": "「STRATA」—— 罗德岛终端风格皮肤：直角切角 + 黑色发丝线 + 黄黑警示条 + 四角登记标记；亮/暗两套底可跟随应用主题。",
   "peerDependencies": {
-    "@deepseek-ai/dsh": "0.1.7-rc.2 || 0.2.0-rc.2",
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2 <0.3.0-0",
     "@deepseek-ai/cordis": "~4.0.4"
   },
   "engines": {
-    "dsh": "0.1.7-rc.2 || 0.2.0-rc.2",
+    "dsh": ">=0.2.0-rc.2 <0.3.0-0",
     "node": ">=24"
   },
   "dsh": {
     "manifestVersion": 1,
     "skin": {
       "apiVersion": "dsh.ecosystem.ui-skin-loader/v1",
-      "id": "strata",
+      "id": "skins.strata",
       "name": "STRATA",
       "version": "1.0.0",
       "author": "tenebris173",
